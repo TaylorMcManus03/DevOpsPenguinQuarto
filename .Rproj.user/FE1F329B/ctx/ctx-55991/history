@@ -1,0 +1,7 @@
+renv::init()
+pwd
+cwp
+cwd
+directory
+renv::status()
+renv::activate()

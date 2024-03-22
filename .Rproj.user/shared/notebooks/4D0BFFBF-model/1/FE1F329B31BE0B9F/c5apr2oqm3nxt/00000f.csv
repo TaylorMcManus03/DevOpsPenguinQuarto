@@ -1,0 +1,30 @@
+"0",""
+"0","#calling API"
+"0","req_data = {"
+"0","  ""bill_length_mm"": 0,"
+"0","  ""species_Chinstrap"": False,"
+"0","  ""species_Gentoo"": False,"
+"0","  ""sex_male"": False"
+"0","}"
+"0","req = requests.post('http://127.0.0.1:8080/predict', json = [req_data])"
+"0","res = req.json().get('predict')[0]"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'req' is not defined
+"
+"0","app.run(port = 8080)"
+"2","INFO:     Started server process [17004]
+"
+"2","INFO:     Waiting for application startup.
+INFO:     VetiverAPI starting...
+INFO:     Application startup complete.
+"
+"2","INFO:     Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+"
+"2","INFO:     Shutting down
+"
+"2","INFO:     Waiting for application shutdown.
+"
+"2","INFO:     Application shutdown complete.
+INFO:     Finished server process [17004]
+"

@@ -1,0 +1,12 @@
+"0","con = duckdb.connect('my-db.duckdb')"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+duckdb.duckdb.IOException: IO Error: File is already open in 
+C:\Program Files\RStudio\bin\rsession-utf8.exe (PID 8948)
+"
+"0","df = penguins.load_penguins()"
+"0","con.execute('CREATE TABLE penguins AS SELECT * FROM df')"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'con' is not defined
+"
