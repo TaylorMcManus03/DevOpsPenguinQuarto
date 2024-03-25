@@ -6,7 +6,7 @@
 
 - name: Setup renv and install packages
   uses: r-lib/actions/setup-renv@v2
-    with:
+  with:
     cache-version: 1
   env:
     RENV_CONFIG_REPOS_OVERRIDE: https://packagemanager.rstudio.com/all/latest
