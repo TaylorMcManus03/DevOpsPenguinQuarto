@@ -1,5 +1,5 @@
 {
-    "rmdVisualMode": "true",
+    "rmdVisualMode": "false",
     "rmdVisualWrapConfigured": "true",
     "source_window_id": "",
     "Source": "Source",
@@ -7,5 +7,5 @@
     "rmdVisualCollapsedChunks": "",
     "cursorPosition": "85,22",
     "scrollLine": "0",
-    "rmdVisualModeLocation": "67:0"
+    "rmdVisualModeLocation": "67:155.625"
 }
