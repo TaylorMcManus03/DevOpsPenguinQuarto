@@ -7,7 +7,7 @@
 "
 "2","Writing pin:
 Name: 'penguin_model'
-Version: 20240312T213922Z-a6f9b"
+Version: 20240403T094639Z-a6f9b"
 "2","
 "
-"0","#v = VetiverModel.from_pin(b, 'penguin_model')"
+"0","v = VetiverModel.from_pin(b, 'penguin_model')"
