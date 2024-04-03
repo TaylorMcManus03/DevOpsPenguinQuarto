@@ -38,11 +38,18 @@ jobs:
       - run: pip install jupyter
       - run: pip install -r requirements.txt
 
+      - name: Exclude model_card.qmd
+      - run: mv content/model_card.qmd content/model_card.qmd.exclude
+      
+
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+          
+
           
       
