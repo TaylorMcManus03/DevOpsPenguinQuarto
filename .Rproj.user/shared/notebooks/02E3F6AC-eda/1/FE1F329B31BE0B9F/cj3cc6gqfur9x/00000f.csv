@@ -1,4 +1,0 @@
-"0","b = pins.board_folder('data/model', allow_pickle_read=True)"
-"2","Error in pins.board_folder(""data/model"", allow_pickle_read = True) : 
-  could not find function ""pins.board_folder""
-"

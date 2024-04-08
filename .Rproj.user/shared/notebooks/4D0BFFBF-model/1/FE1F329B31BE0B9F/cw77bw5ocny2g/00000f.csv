@@ -1,5 +1,0 @@
-"0","#table created in the R file"
-"0","#con = duckdb.connect('my-db.duckdb')"
-"0","#df = penguins.load_penguins()"
-"0","#con.execute('CREATE TABLE penguins AS SELECT * FROM df')"
-"0","#con.close()"
