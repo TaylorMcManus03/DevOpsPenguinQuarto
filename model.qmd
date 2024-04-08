@@ -69,5 +69,5 @@ v = VetiverModel.from_pin(b, 'penguin_model')
 ```
 
 ```{python}
-con.close()
+#con.close()
 ```
