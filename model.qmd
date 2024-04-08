@@ -63,9 +63,9 @@ v = VetiverModel.from_pin(b, 'penguin_model')
 ```
 
 ```{python}
-con = duckdb.connect('my-db.duckdb')
-df = penguins.load_penguins()
-con.execute('CREATE TABLE penguins AS SELECT * FROM df')
+# con = duckdb.connect('my-db.duckdb')
+# df = penguins.load_penguins()
+# con.execute('CREATE TABLE penguins AS SELECT * FROM df')
 ```
 
 ```{python}
