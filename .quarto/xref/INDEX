@@ -7,5 +7,29 @@
   },
   "model.qmd": {
     "model.html": "9e6c704b"
+  },
+  "lab1.venv/Lib/site-packages/httpcore-1.0.4.dist-info/licenses/LICENSE.md": {
+    "LICENSE.html": "267bf405"
+  },
+  "lab1.venv/Lib/site-packages/httpx-0.27.0.dist-info/licenses/LICENSE.md": {
+    "LICENSE.html": "ca2f2494"
+  },
+  "lab1.venv/Lib/site-packages/idna-3.6.dist-info/LICENSE.md": {
+    "LICENSE.html": "9ffabcf0"
+  },
+  "lab1.venv/Lib/site-packages/numpy/random/LICENSE.md": {
+    "LICENSE.html": "7c37a38e"
+  },
+  "lab1.venv/Lib/site-packages/rsconnect_python-1.22.0.dist-info/LICENSE.md": {
+    "LICENSE.html": "c9b94e8a"
+  },
+  "lab1.venv/Lib/site-packages/starlette-0.36.3.dist-info/licenses/LICENSE.md": {
+    "LICENSE.html": "fe77b51f"
+  },
+  "lab1.venv/Lib/site-packages/uvicorn-0.27.1.dist-info/licenses/LICENSE.md": {
+    "LICENSE.html": "297d24b3"
+  },
+  "index.qmd": {
+    "index.html": "863f2db3"
   }
 }

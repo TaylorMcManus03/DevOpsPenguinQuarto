@@ -5,9 +5,13 @@ website:
   title: "DevOpsQuartoSite"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
+      - text: "Home"
+        file: index.qmd
+      - text: "Penguins EDA"
+        file: eda.qmd
+      - model.qmd
       - about.qmd
+    home: index.qmd
 
 format:
   html:

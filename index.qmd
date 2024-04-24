@@ -1,11 +1,5 @@
 ---
-title: "DevOpsQuartoSite"
+title: "DevOps Quarto Website - Math 378"
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
+![](https://1.bp.blogspot.com/-cEgmH_kVDp0/XpikIVFKegI/AAAAAAAAq9Q/oAt1KJQgp1gxuvpheGMib_XKHzbrNlf-wCLcBGAsYHQ/s2560/penguin_animal_funny_166591_3840x2160.jpg)

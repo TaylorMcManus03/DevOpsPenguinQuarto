@@ -1,5 +1,5 @@
 ---
-title: "Penguins EDA"
+title: "Penguins Exploratory Data Analysis"
 format:
   html:
     code-fold: true
@@ -7,7 +7,8 @@ format:
 
 ## Penguin Size and Mass by Sex and Species
 
-```{r}
+```{r, echo=FALSE}
+#| message: false 
 library(palmerpenguins)
 library(dplyr)
 library(ggplot2)
@@ -16,7 +17,8 @@ library(dbplyr)
 df <- palmerpenguins::penguins
 ```
 
-```{r}
+```{r, echo=FALSE}
+#| message: false 
 df %>%
   group_by(species, sex) %>%
   summarise(
@@ -30,16 +32,33 @@ df %>%
 
 ## Penguin Size vs Mass by Species
 
-```{r}
+```{r, echo=FALSE}
+#| message: false 
+#| warning: false
 df %>%
   ggplot(aes(x = bill_length_mm, y = body_mass_g, color = species)) +
   geom_point() + 
   geom_smooth(method = "lm")
 ```
+In general, this graph demonstrates that the species predictor has a strong relationship with the bill_length_mm and body_mass_g. For Adelie penguins, there seems to be bill_length_mm and body_mass_g values on the lower end suggesting that the Adelie species is typically a smaller type of penguin. The Chinstrap seems to demonstrate longer bill_length_mm but similar body_mass_g meaning that these penguins are similar size to Adelie penguins but with a proportionally longer bill. Finally, the Gentoo penguins show generally higher body_mass_g than both species and bill_length_mm similar to the Chinstrap species. This tells us that likely these are the biggest penguin species of thr three and have bill legnths proportionally closer to the Adelie penguins.
 
-#data processing
+## Penguin Size vs Mass by Sex
+```{r, echo=FALSE}
+#| message: false 
+#| warning: false
 
-```{r}
+df_new<-df[complete.cases(df$sex), ]
+df_new %>%
+  ggplot(aes(x = bill_length_mm, y = body_mass_g, color = sex)) +
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
+The line of best fit for the two sexes are relatively parallel demonstrating that the overall proportion of bill_length_mm and body_mass_g have similar results between male and female penguins. Looking at the individual data points, it seems that, on the extreme ends of body_mass_g, males tend to lie in the high zone and females in the low. In the center of the body_mass_g range, there is a good mix. This demonstrates that sex may not be the only delineating factor in correlated body_mass_g. As seen above, the interplay of species also has a big play in the mass of a penguin. In terms of bill_length_mm, there seems to be an even spread across the range for both sexes. Overall, this graph shows a weaker relationship between bill_length_mm and body_mass_g, and sex in comparison to the relationship show above with bill_length_mm and body_mass_g, and sex.
+
+## Data Processing
+
+```{r, echo=FALSE}
+#| message: false 
 df %>%
   group_by(species, sex) %>%
   summarise(
@@ -52,6 +71,7 @@ df %>%
   knitr::kable()
 ```
 
+<!--
 # ```{r}
 # #connecting to the database
 # library(dbplyr)
@@ -85,3 +105,4 @@ df %>%
 # ```{r}
 # DBI::dbDisconnect(con)
 ```
+-->

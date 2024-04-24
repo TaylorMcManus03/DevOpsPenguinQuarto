@@ -5,11 +5,16 @@ format:
     code-fold: true
 ---
 
-```{r}
+```{r, echo=FALSE}
+#| message: false 
+#| warning: false
 library(reticulate)
-#code chunk
+library(rsample)
+library(yardstick)
+library(tidyverse)
+library(parsnip)
+library(tidymodels)
 ```
-
 
 ```{python}
 from palmerpenguins import penguins
@@ -32,7 +37,7 @@ df = penguins.load_penguins().dropna()
 df.head(3)
 ```
 
-## Define Model and Fit
+## Define Linear Model and Fit
 
 ```{python}
 X = get_dummies(df[['bill_length_mm', 'species', 'sex']], drop_first = True)
@@ -50,18 +55,41 @@ print(f"Columns {X.columns}")
 print(f"Coefficients {model.coef_}")
 ```
 
-#turning model into a vetiver
+## Using Cross-Validation to Judge Model Performance
+
+```{r}
+#prep code
+set.seed(1234)
+df <- palmerpenguins::penguins
+df<-na.omit(df)
+
+Penguins_folds <- vfold_cv(df, v = 5)
+lm_spec <- linear_reg() %>%   
+  set_mode("regression") %>%   
+  set_engine("lm")
+
+
+#cross-validating
+lm_spec %>%   
+  fit_resamples(body_mass_g ~ bill_length_mm+as.factor(species)+as.factor(sex), resamples = Penguins_folds, 
+                metrics = metric_set(rmse, rsq)) %>%   
+  collect_metrics()
+```
+
+## **Turning Model into a Vetiver**
 
 ```{python}
 v = VetiverModel(model, model_name='penguin_model', prototype_data=X)
 ```
 
-```{python}
+```{python, echo=FALSE}
 b = pins.board_folder('data/model', allow_pickle_read=True)
 vetiver_pin_write(b,v)
 v = VetiverModel.from_pin(b, 'penguin_model')
 ```
 
+````{=html}
+<!--
 ```{python}
 # con = duckdb.connect('my-db.duckdb')
 # df = penguins.load_penguins()
@@ -71,3 +99,5 @@ v = VetiverModel.from_pin(b, 'penguin_model')
 ```{python}
 #con.close()
 ```
+-->
+````
