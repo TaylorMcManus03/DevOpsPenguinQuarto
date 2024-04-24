@@ -108,6 +108,8 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#penguin-size-and-mass-by-sex-and-species" id="toc-penguin-size-and-mass-by-sex-and-species" class="nav-link active" data-scroll-target="#penguin-size-and-mass-by-sex-and-species">Penguin Size and Mass by Sex and Species</a></li>
   <li><a href="#penguin-size-vs-mass-by-species" id="toc-penguin-size-vs-mass-by-species" class="nav-link" data-scroll-target="#penguin-size-vs-mass-by-species">Penguin Size vs Mass by Species</a></li>
+  <li><a href="#penguin-size-vs-mass-by-sex" id="toc-penguin-size-vs-mass-by-sex" class="nav-link" data-scroll-target="#penguin-size-vs-mass-by-sex">Penguin Size vs Mass by Sex</a></li>
+  <li><a href="#data-processing" id="toc-data-processing" class="nav-link" data-scroll-target="#data-processing">Data Processing</a></li>
   </ul>
 </nav>
     </div>
@@ -239,19 +241,23 @@ ul.task-list li input[type="checkbox"] {
 <section id="penguin-size-vs-mass-by-species" class="level2">
 <h2 class="anchored" data-anchor-id="penguin-size-vs-mass-by-species">Penguin Size vs Mass by Species</h2>
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
-(`stat_smooth()`).</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
-(`geom_point()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <p><img src="eda_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>##data processing</p>
+<p>In general, this graph demonstrates that the species predictor has a strong relationship with the bill_length_mm and body_mass_g. For Adelie penguins, there seems to be bill_length_mm and body_mass_g values on the lower end suggesting that the Adelie species is typically a smaller type of penguin. The Chinstrap seems to demonstrate longer bill_length_mm but similar body_mass_g meaning that these penguins are similar size to Adelie penguins but with a proportionally longer bill. Finally, the Gentoo penguins show generally higher body_mass_g than both species and bill_length_mm similar to the Chinstrap species. This tells us that likely these are the biggest penguin species of thr three and have bill legnths proportionally closer to the Adelie penguins.</p>
+</section>
+<section id="penguin-size-vs-mass-by-sex" class="level2">
+<h2 class="anchored" data-anchor-id="penguin-size-vs-mass-by-sex">Penguin Size vs Mass by Sex</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="eda_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>The line of best fit for the two sexes are relatively parallel demonstrating that the overall proportion of bill_length_mm and body_mass_g have similar results between male and female penguins. Looking at the individual data points, it seems that, on the extreme ends of body_mass_g, males tend to lie in the high zone and females in the low. In the center of the body_mass_g range, there is a good mix. This demonstrates that sex may not be the only delineating factor in correlated body_mass_g. As seen above, the interplay of species also has a big play in the mass of a penguin. In terms of bill_length_mm, there seems to be an even spread across the range for both sexes. Overall, this graph shows a weaker relationship between bill_length_mm and body_mass_g, and sex in comparison to the relationship show above with bill_length_mm and body_mass_g, and sex.</p>
+</section>
+<section id="data-processing" class="level2">
+<h2 class="anchored" data-anchor-id="data-processing">Data Processing</h2>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
