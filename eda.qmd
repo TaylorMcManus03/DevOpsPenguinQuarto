@@ -7,7 +7,7 @@ format:
 
 ## Penguin Size and Mass by Sex and Species
 
-```{r, echo=FALSE}
+```{r}
 #| message: false 
 library(palmerpenguins)
 library(dplyr)
