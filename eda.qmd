@@ -8,7 +8,6 @@ format:
 ## Penguin Size and Mass by Sex and Species
 
 ```{r}
-#| message: false 
 library(palmerpenguins)
 library(dplyr)
 library(ggplot2)
