@@ -8,6 +8,7 @@ format:
 ## Penguin Size and Mass by Sex and Species
 
 ```{r}
+#| message: false
 library(palmerpenguins)
 library(dplyr)
 library(ggplot2)
@@ -16,7 +17,7 @@ library(dbplyr)
 df <- palmerpenguins::penguins
 ```
 
-```{r, echo=FALSE}
+```{r}
 #| message: false 
 df %>%
   group_by(species, sex) %>%
@@ -31,7 +32,7 @@ df %>%
 
 ## Penguin Size vs Mass by Species
 
-```{r, echo=FALSE}
+```{r}
 #| message: false 
 #| warning: false
 df %>%
@@ -42,7 +43,7 @@ df %>%
 In general, this graph demonstrates that the species predictor has a strong relationship with the bill_length_mm and body_mass_g. For Adelie penguins, there seems to be bill_length_mm and body_mass_g values on the lower end suggesting that the Adelie species is typically a smaller type of penguin. The Chinstrap seems to demonstrate longer bill_length_mm but similar body_mass_g meaning that these penguins are similar size to Adelie penguins but with a proportionally longer bill. Finally, the Gentoo penguins show generally higher body_mass_g than both species and bill_length_mm similar to the Chinstrap species. This tells us that likely these are the biggest penguin species of thr three and have bill legnths proportionally closer to the Adelie penguins.
 
 ## Penguin Size vs Mass by Sex
-```{r, echo=FALSE}
+```{r}
 #| message: false 
 #| warning: false
 
@@ -56,7 +57,7 @@ The line of best fit for the two sexes are relatively parallel demonstrating tha
 
 ## Data Processing
 
-```{r, echo=FALSE}
+```{r}
 #| message: false 
 df %>%
   group_by(species, sex) %>%
