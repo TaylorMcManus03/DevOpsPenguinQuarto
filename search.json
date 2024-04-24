@@ -39,7 +39,7 @@
     "href": "model.html#turning-model-into-a-vetiver",
     "title": "Model",
     "section": "Turning Model into a Vetiver",
-    "text": "Turning Model into a Vetiver\n\n\nCode\nv = VetiverModel(model, model_name='penguin_model', prototype_data=X)\n\n\n\n\nModel Cards provide a framework for transparent, responsible reporting. \n Use the vetiver `.qmd` Quarto template as a place to start, \n with vetiver.model_card()\nWriting pin:\nName: 'penguin_model'\nVersion: 20240424T172625Z-d3492"
+    "text": "Turning Model into a Vetiver\n\n\nCode\nv = VetiverModel(model, model_name='penguin_model', prototype_data=X)\n\n\n\n\nModel Cards provide a framework for transparent, responsible reporting. \n Use the vetiver `.qmd` Quarto template as a place to start, \n with vetiver.model_card()\nWriting pin:\nName: 'penguin_model'\nVersion: 20240424T194727Z-d3492"
   },
   {
     "objectID": "about.html",
