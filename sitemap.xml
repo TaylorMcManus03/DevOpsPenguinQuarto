@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/model.html</loc>
+    <lastmod>2024-04-24T17:19:26.959Z</lastmod>
+  </url>
+  <url>
     <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/about.html</loc>
-    <lastmod>2024-04-08T20:58:06.545Z</lastmod>
-  </url>
-  <url>
-    <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/lab1.venv/Lib/site-packages/uvicorn-0.27.1.dist-info/licenses/LICENSE.html</loc>
-    <lastmod>2024-04-08T20:58:10.181Z</lastmod>
-  </url>
-  <url>
-    <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/lab1.venv/Lib/site-packages/idna-3.6.dist-info/LICENSE.html</loc>
-    <lastmod>2024-04-08T20:58:06.761Z</lastmod>
-  </url>
-  <url>
-    <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/lab1.venv/Lib/site-packages/starlette-0.36.3.dist-info/licenses/LICENSE.html</loc>
-    <lastmod>2024-04-08T20:58:10.141Z</lastmod>
-  </url>
-  <url>
-    <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/lab1.venv/Lib/site-packages/pandas/tests/indexes/period/test_indexing.html</loc>
-    <lastmod>2024-04-08T20:58:07.405Z</lastmod>
+    <lastmod>2024-04-24T17:19:23.267Z</lastmod>
   </url>
   <url>
     <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/lab1.venv/Lib/site-packages/rsconnect_python-1.22.0.dist-info/LICENSE.html</loc>
-    <lastmod>2024-04-08T20:58:09.145Z</lastmod>
+    <lastmod>2024-04-24T17:19:25.875Z</lastmod>
   </url>
   <url>
-    <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/model.html</loc>
-    <lastmod>2024-04-08T20:58:10.229Z</lastmod>
-  </url>
-  <url>
-    <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/index.html</loc>
-    <lastmod>2024-04-08T20:58:06.545Z</lastmod>
-  </url>
-  <url>
-    <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/lab1.venv/Lib/site-packages/numpy/random/LICENSE.html</loc>
-    <lastmod>2024-04-08T20:58:07.113Z</lastmod>
-  </url>
-  <url>
-    <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/lab1.venv/Lib/site-packages/pandas/tests/indexes/datetimes/test_indexing.html</loc>
-    <lastmod>2024-04-08T20:58:07.393Z</lastmod>
-  </url>
-  <url>
-    <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/lab1.venv/Lib/site-packages/pandas/tests/indexes/period/test_constructors.html</loc>
-    <lastmod>2024-04-08T20:58:07.405Z</lastmod>
-  </url>
-  <url>
-    <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/lab1.venv/Lib/site-packages/httpcore-1.0.4.dist-info/licenses/LICENSE.html</loc>
-    <lastmod>2024-04-08T20:58:06.745Z</lastmod>
+    <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/lab1.venv/Lib/site-packages/uvicorn-0.27.1.dist-info/licenses/LICENSE.html</loc>
+    <lastmod>2024-04-24T17:19:26.911Z</lastmod>
   </url>
   <url>
     <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/lab1.venv/Lib/site-packages/httpx-0.27.0.dist-info/licenses/LICENSE.html</loc>
-    <lastmod>2024-04-08T20:58:06.753Z</lastmod>
+    <lastmod>2024-04-24T17:19:23.479Z</lastmod>
+  </url>
+  <url>
+    <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/lab1.venv/Lib/site-packages/pandas/tests/indexes/period/test_constructors.html</loc>
+    <lastmod>2024-04-24T17:19:24.131Z</lastmod>
+  </url>
+  <url>
+    <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/lab1.venv/Lib/site-packages/pandas/tests/indexes/datetimes/test_indexing.html</loc>
+    <lastmod>2024-04-24T17:19:24.119Z</lastmod>
   </url>
   <url>
     <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/eda.html</loc>
-    <lastmod>2024-04-08T20:58:06.545Z</lastmod>
+    <lastmod>2024-04-24T17:19:23.267Z</lastmod>
+  </url>
+  <url>
+    <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/lab1.venv/Lib/site-packages/pandas/tests/indexes/period/test_indexing.html</loc>
+    <lastmod>2024-04-24T17:19:24.131Z</lastmod>
+  </url>
+  <url>
+    <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/lab1.venv/Lib/site-packages/starlette-0.36.3.dist-info/licenses/LICENSE.html</loc>
+    <lastmod>2024-04-24T17:19:26.875Z</lastmod>
+  </url>
+  <url>
+    <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/lab1.venv/Lib/site-packages/httpcore-1.0.4.dist-info/licenses/LICENSE.html</loc>
+    <lastmod>2024-04-24T17:19:23.475Z</lastmod>
+  </url>
+  <url>
+    <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/lab1.venv/Lib/site-packages/numpy/random/LICENSE.html</loc>
+    <lastmod>2024-04-24T17:19:23.843Z</lastmod>
+  </url>
+  <url>
+    <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/lab1.venv/Lib/site-packages/idna-3.6.dist-info/LICENSE.html</loc>
+    <lastmod>2024-04-24T17:19:23.491Z</lastmod>
+  </url>
+  <url>
+    <loc>https://TaylorMcManus03.github.io/DevOpsPenguinQuarto/index.html</loc>
+    <lastmod>2024-04-24T17:19:23.275Z</lastmod>
   </url>
 </urlset>

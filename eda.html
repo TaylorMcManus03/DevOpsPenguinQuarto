@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DevOpsQuartoSite - Penguins EDA</title>
+<title>DevOpsQuartoSite - Penguins Exploratory Data Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -127,6 +93,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link active" href="./eda.html" aria-current="page"> 
+<span class="menu-text">Penguins EDA</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./model.html"> 
+<span class="menu-text">Model</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
@@ -148,13 +122,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#penguin-size-and-mass-by-sex-and-species" id="toc-penguin-size-and-mass-by-sex-and-species" class="nav-link active" data-scroll-target="#penguin-size-and-mass-by-sex-and-species">Penguin Size and Mass by Sex and Species</a></li>
   <li><a href="#penguin-size-vs-mass-by-species" id="toc-penguin-size-vs-mass-by-species" class="nav-link" data-scroll-target="#penguin-size-vs-mass-by-species">Penguin Size vs Mass by Species</a></li>
-  <li><a href="#r-connecting-to-the-database-librarydbplyr-con---dbidbconnect-duckdbduckdb-dbdir-my-db.duckdb" id="toc-r-connecting-to-the-database-librarydbplyr-con---dbidbconnect-duckdbduckdb-dbdir-my-db.duckdb" class="nav-link" data-scroll-target="#r-connecting-to-the-database-librarydbplyr-con---dbidbconnect-duckdbduckdb-dbdir-my-db.duckdb"><code>{r} # #connecting to the database # library(dbplyr) # con &lt;- DBI::dbConnect( #   duckdb::duckdb(),  #   dbdir = "my-db.duckdb" #   ) #</code></a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
-  <li><a href="#r-dbidbwritetablecon-penguins-palmerpenguinspenguins-df---dplyrtblcon-penguins" id="toc-r-dbidbwritetablecon-penguins-palmerpenguinspenguins-df---dplyrtblcon-penguins" class="nav-link" data-scroll-target="#r-dbidbwritetablecon-penguins-palmerpenguinspenguins-df---dplyrtblcon-penguins"><code>{r} # DBI::dbWriteTable(con, "penguins", palmerpenguins::penguins) # df &lt;- dplyr::tbl(con, "penguins") #</code></a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
-  <li><a href="#r-req---httr2requesthttp127.0.0.18080predict-httr2req_body_json-list-list-bill_length_mm-0-species_chinstrap-false-species_gentoo-false-sex_male-false-httr2req_perform-res---httr2resp_body_jsonreqpredict1" id="toc-r-req---httr2requesthttp127.0.0.18080predict-httr2req_body_json-list-list-bill_length_mm-0-species_chinstrap-false-species_gentoo-false-sex_male-false-httr2req_perform-res---httr2resp_body_jsonreqpredict1" class="nav-link" data-scroll-target="#r-req---httr2requesthttp127.0.0.18080predict-httr2req_body_json-list-list-bill_length_mm-0-species_chinstrap-false-species_gentoo-false-sex_male-false-httr2req_perform-res---httr2resp_body_jsonreqpredict1"><code>{r} # req &lt;- httr2::request("http://127.0.0.1:8080/predict") |&gt; #   httr2::req_body_json( #     list( #       list( #         "bill_length_mm" = 0, #         "species_Chinstrap" = FALSE, #         "species_Gentoo" = FALSE, #         "sex_male" = FALSE #       ) #     ) #   ) |&gt; #   httr2::req_perform() # res &lt;- httr2::resp_body_json(req)$predict[[1]] #</code></a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"></a></li>
-  <li><a href="#r-dbidbdisconnectcon" id="toc-r-dbidbdisconnectcon" class="nav-link" data-scroll-target="#r-dbidbdisconnectcon"><code>{r} # DBI::dbDisconnect(con)</code></a></li>
+  <li><a href="#penguin-size-vs-mass-by-sex" id="toc-penguin-size-vs-mass-by-sex" class="nav-link" data-scroll-target="#penguin-size-vs-mass-by-sex">Penguin Size vs Mass by Sex</a></li>
+  <li><a href="#data-processing" id="toc-data-processing" class="nav-link" data-scroll-target="#data-processing">Data Processing</a></li>
   </ul>
 </nav>
     </div>
@@ -163,7 +132,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Penguins EDA</h1>
+<h1 class="title">Penguins Exploratory Data Analysis</h1>
 </div>
 
 
@@ -183,61 +152,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="penguin-size-and-mass-by-sex-and-species" class="level2">
 <h2 class="anchored" data-anchor-id="penguin-size-and-mass-by-sex-and-species">Penguin Size and Mass by Sex and Species</h2>
 <div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'dplyr'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:stats':
-
-    filter, lag</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:base':
-
-    intersect, setdiff, setequal, union</code></pre>
-</div>
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dbplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'dbplyr'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:dplyr':
-
-    ident, sql</code></pre>
-</div>
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> palmerpenguins<span class="sc">::</span>penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species, sex) <span class="sc">%&gt;%</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">across</span>(</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">where</span>(is.numeric), </span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>      \(x) <span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>      )</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stderr">
-<pre><code>`summarise()` has grouped output by 'species'. You can override using the
-`.groups` argument.</code></pre>
-</div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
 <colgroup>
@@ -341,24 +255,6 @@ Attaching package: 'dbplyr'</code></pre>
 <section id="penguin-size-vs-mass-by-species" class="level2">
 <h2 class="anchored" data-anchor-id="penguin-size-vs-mass-by-species">Penguin Size vs Mass by Species</h2>
 <div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
-(`stat_smooth()`).</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
-(`geom_point()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -367,25 +263,24 @@ Attaching package: 'dbplyr'</code></pre>
 </div>
 </div>
 </div>
-<p>#data processing</p>
+<p>In general, this graph demonstrates that the species predictor has a strong relationship with the bill_length_mm and body_mass_g. For Adelie penguins, there seems to be bill_length_mm and body_mass_g values on the lower end suggesting that the Adelie species is typically a smaller type of penguin. The Chinstrap seems to demonstrate longer bill_length_mm but similar body_mass_g meaning that these penguins are similar size to Adelie penguins but with a proportionally longer bill. Finally, the Gentoo penguins show generally higher body_mass_g than both species and bill_length_mm similar to the Chinstrap species. This tells us that likely these are the biggest penguin species of thr three and have bill legnths proportionally closer to the Adelie penguins.</p>
+</section>
+<section id="penguin-size-vs-mass-by-sex" class="level2">
+<h2 class="anchored" data-anchor-id="penguin-size-vs-mass-by-sex">Penguin Size vs Mass by Sex</h2>
 <div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species, sex) <span class="sc">%&gt;%</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">across</span>(</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">ends_with</span>(<span class="st">"mm"</span>) <span class="sc">|</span> <span class="fu">ends_with</span>(<span class="st">"g"</span>),</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>      \(x) <span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>      )</span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">collect</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stderr">
-<pre><code>`summarise()` has grouped output by 'species'. You can override using the
-`.groups` argument.</code></pre>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="eda_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
+</div>
+</div>
+<p>The line of best fit for the two sexes are relatively parallel demonstrating that the overall proportion of bill_length_mm and body_mass_g have similar results between male and female penguins. Looking at the individual data points, it seems that, on the extreme ends of body_mass_g, males tend to lie in the high zone and females in the low. In the center of the body_mass_g range, there is a good mix. This demonstrates that sex may not be the only delineating factor in correlated body_mass_g. As seen above, the interplay of species also has a big play in the mass of a penguin. In terms of bill_length_mm, there seems to be an even spread across the range for both sexes. Overall, this graph shows a weaker relationship between bill_length_mm and body_mass_g, and sex in comparison to the relationship show above with bill_length_mm and body_mass_g, and sex.</p>
+</section>
+<section id="data-processing" class="level2">
+<h2 class="anchored" data-anchor-id="data-processing">Data Processing</h2>
+<div class="cell">
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
 <colgroup>
@@ -475,27 +370,41 @@ Attaching package: 'dbplyr'</code></pre>
 </table>
 </div>
 </div>
-</section>
-<section id="r-connecting-to-the-database-librarydbplyr-con---dbidbconnect-duckdbduckdb-dbdir-my-db.duckdb" class="level1">
-<h1><code>{r} # #connecting to the database # library(dbplyr) # con &lt;- DBI::dbConnect( #   duckdb::duckdb(),  #   dbdir = "my-db.duckdb" #   ) #</code></h1>
-</section>
-<section id="section" class="level1">
-<h1></h1>
-</section>
-<section id="r-dbidbwritetablecon-penguins-palmerpenguinspenguins-df---dplyrtblcon-penguins" class="level1">
-<h1><code>{r} # DBI::dbWriteTable(con, "penguins", palmerpenguins::penguins) # df &lt;- dplyr::tbl(con, "penguins") #</code></h1>
-</section>
-<section id="section-1" class="level1">
-<h1></h1>
-</section>
-<section id="r-req---httr2requesthttp127.0.0.18080predict-httr2req_body_json-list-list-bill_length_mm-0-species_chinstrap-false-species_gentoo-false-sex_male-false-httr2req_perform-res---httr2resp_body_jsonreqpredict1" class="level1">
-<h1><code>{r} # req &lt;- httr2::request("http://127.0.0.1:8080/predict") |&gt; #   httr2::req_body_json( #     list( #       list( #         "bill_length_mm" = 0, #         "species_Chinstrap" = FALSE, #         "species_Gentoo" = FALSE, #         "sex_male" = FALSE #       ) #     ) #   ) |&gt; #   httr2::req_perform() # res &lt;- httr2::resp_body_json(req)$predict[[1]] #</code></h1>
-</section>
-<section id="section-2" class="level1">
-<h1></h1>
-</section>
-<section id="r-dbidbdisconnectcon" class="level1">
-<h1><code>{r} # DBI::dbDisconnect(con)</code></h1>
+<!--
+# ```{r}
+# #connecting to the database
+# library(dbplyr)
+# con <- DBI::dbConnect(
+#   duckdb::duckdb(), 
+#   dbdir = "my-db.duckdb"
+#   )
+# ```
+# 
+# ```{r}
+# DBI::dbWriteTable(con, "penguins", palmerpenguins::penguins)
+# df <- dplyr::tbl(con, "penguins")
+# ```
+# 
+# ```{r}
+# req <- httr2::request("http://127.0.0.1:8080/predict") |>
+#   httr2::req_body_json(
+#     list(
+#       list(
+#         "bill_length_mm" = 0,
+#         "species_Chinstrap" = FALSE,
+#         "species_Gentoo" = FALSE,
+#         "sex_male" = FALSE
+#       )
+#     )
+#   ) |>
+#   httr2::req_perform()
+# res <- httr2::resp_body_json(req)$predict[[1]]
+# ```
+# 
+# ```{r}
+# DBI::dbDisconnect(con)
+```
+-->
 
 
 </section>
